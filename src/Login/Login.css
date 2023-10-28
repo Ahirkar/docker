@@ -1,0 +1,14 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 20px;
+  height: 100vh;
+  background-color: lightblue; /* Change the background color here */
+  gap: 20px; /* Adjust the spacing between buttons */
+}
+
+.container > button {
+  flex: 0 0 auto;
+}

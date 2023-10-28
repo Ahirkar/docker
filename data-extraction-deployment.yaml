@@ -1,0 +1,44 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: kompose convert -f docker-compose.yaml
+    kompose.version: 1.28.0 (c4137012e)
+  creationTimestamp: null
+  labels:
+    app1: data-extraction
+  name: data-extraction
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app1: data-extraction
+  strategy: {}
+  template:
+    metadata:
+      annotations:
+        kompose.cmd: kompose convert -f docker-compose.yaml
+        kompose.version: 1.28.0 (c4137012e)
+      creationTimestamp: null
+      labels:
+        io.kompose.network/june-15-rasa-rasa-network: "true"
+        app1: data-extraction
+    spec:
+      containers:
+        - name: data-extraction
+          image: data-extraction:d1
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 5006
+
+          #      imagePullSecrets:
+#        - name: k8s-secret
+#      containers:
+#        - image: nikhilsg/nick_007:a2
+#          name: extraction
+#          ports:
+#            - containerPort: 5006
+          resources: {}
+      restartPolicy: Always
+status: {}

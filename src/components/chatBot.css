@@ -1,0 +1,156 @@
+
+video-section {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+.box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  min-height: 90vh;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 10px;
+}
+
+.card {
+  width: 30%;
+  height: calc(90% - 60px); /* subtract the height of the header */
+  border: 1px solid black; /* add border */
+  box-sizing: border-box; /* include border in height calculation */
+}
+
+
+.cardHeader {
+  height: 60px;
+  background: #060dcfc7;
+  border-radius: 10px 10px 0 0;
+  padding: 5px;
+  font-size: 20px;
+}
+
+.cardHeaderTitle {
+  color: aliceblue;
+}
+
+.cardBody {
+  height: 90%;
+  padding-top: 10px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  margin-top: 20px;
+}
+
+.cardFooter {
+  border-top: 1px solid black;
+  border-radius: 0 0 10px 10px;
+  padding: 5px;
+}
+
+.msgarea {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.msgalignstart {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.botIcon {
+  font-size: 1.5rem;
+  color: #060dcf;
+  margin-right: 10px;
+  width: 50px;
+  height: 50px;
+}
+
+.botmsg {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  background-color: #f2f2f2;
+  padding: 10px;
+  border-radius: 15px;
+  max-width: 70%;
+}
+
+.msgalignend {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.usermsg {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  background-color: #0084ff;
+  padding: 10px;
+  border-radius: 15px;
+  color: white;
+  max-width: 70%;
+}
+
+.userIcon {
+  font-size: 1.5rem;
+  color: #0084ff;
+  margin-left: 10px;
+  width: 50px;
+  height: 50px;
+}
+
+.form-style {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+
+.footerRow {
+  display: flex;
+  justify-content: center;
+}
+
+.msginp {
+  width: 100%;
+  border-radius: 25px;
+  border: none;
+  padding: 10px;
+  font-size: 1rem;
+  box-shadow: 0 16px 20px 0 rgba(0, 0, 0, 0.4);
+  outline: none;
+}
+
+.circleBtn {
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  border: none;
+  background-color: #0084ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 5px;
+  margin-right: 5px;
+  cursor: pointer;
+  box-shadow: 0 16px 20px 0 rgba(0, 0, 0, 0.4);
+  outline: none;
+}
+
+.circleBtn:hover {
+  background-color: #060dcf;
+}
+
+.sendBtn {
+  font-size: 2rem;
+  color: white;
+}

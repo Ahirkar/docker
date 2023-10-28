@@ -1,0 +1,426 @@
+version: "3.1"
+
+intents:
+  - greet
+  - name
+  - Date of Birth
+  - Aadhaar Number
+  - gender
+  - exit
+  - start
+  - City
+  - State
+  - pincode
+  - Mobile Number
+  - Out Of Box Questions
+  - What Vkyc
+  - KYC Process
+  - StartVkyc
+  - confirm
+  - Notconfirm
+  - Time required
+  - Required Documents
+  - Why Vkyc
+  - Question about Data
+  - Vkyc Timecycle
+  - Registration Completion
+  - Device
+  - Post Vkyc
+  - eligibility
+  - Bot availbility
+  - Vkyc Repeat
+  - Pan Number
+  - Skip question
+  - Update
+  - Consent
+  - Forget Password
+  - Repeat Question
+  - Know Info
+  - Doubts
+  - More Info
+  - User angry
+  - Start KYC
+  - Info Using
+
+
+entities:
+  - genderType
+  - bid
+  - AdharNo
+  - usrNam
+  - panNum
+  - Mobile Number
+  - Pincode
+  - stateName
+  - CityName
+
+
+slots:
+  city name:
+    type: list
+    mappings:
+      - type: from_entity
+        entity: CityName
+
+  state name:
+    type: list
+    mappings:
+      - type: from_entity
+        entity: stateName
+
+  Pincode:
+    type: list
+    mappings:
+      - type: from_entity
+        entity: Pincode
+
+  Mobile Number:
+    type: list
+    mappings:
+      - type: from_entity
+        entity: Mobile Number
+
+  name:
+    type: list
+    mappings:
+      - type: from_entity
+        entity: usrNam
+
+  Pan Card:
+    type: list
+    mappings:
+      - type: from_entity
+        entity: panNum
+
+  aadhaar number:
+    type: list
+    mappings:
+      - type: from_entity
+        entity: AdharNo
+
+  Gender Type:
+    type: list
+    mappings:
+      - type: from_entity
+        entity: genderType
+
+  # strt_rec:
+  #   type: text
+  #   mappings:
+  #     - type: from_entity
+  #       entity: strt_rec
+
+  Date of Birth:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: bid
+
+
+
+responses:
+
+  utter_confirm:
+  - text: "Great!! lets start, Now give me your 12 digit Aadhaar number."
+
+  utter_VerifyKyc:
+  - text: "Now, I will start your verification process. Please give your 12 digit Aadhaar Number"
+
+  utter_askagain:
+  - text: "Heyy, hope your doing well. Should I start your vKYC."
+    # url: "https://www.google.com/"
+
+  utter_TimeRequired1:
+  - text: "Within 5-10 minutes your online vKYC verification will be done."
+
+  utter_DocumentRequirement:
+  - text: "To complete vKYC you should have your Aadhar Card and Pan Card with you."
+
+  utter_KYCProcess:
+  - text: After registration on portal you will get a link for vKYC verification, follow that link it will open vkyc 
+          Bot first it will ask aadhaar number for initial verification then it will ask three random questions 
+          from the data you gave on portal. After giving all correct answers chatbot will capture your face, Aadhaar Card and PAN card.
+
+  utter_WhyVkyc:
+  - text: "To do any banking related works, you need your video-KYC to be completed."
+
+  utter_QuestionAboutData:
+  - text: "Your data is completely safe with us and it will not be shared with anyone."
+
+  utter_TimeRequired2:
+  - text: "Do you get your answer, now can we proceed to your vKYC verification."
+
+  utter_PostKyc:
+  - text: "Vkyc process is for user registration & verification, so he/she can avail the bank services, you don't have to go anywhere after vkyc."
+
+  utter_device:
+  - text: "You can use PC, Laptop, SmartPhone."
+
+  utter_VkycTimecycle:
+  - text: "After completing registration for vkyc your URN is valid for next 5 years"
+
+  utter_RegistrationCompletion:
+  - text: "At the end of your registration you will receive a SMS that give information about completion of vkyc process"
+
+  utter_eligibility:
+  - text: "These are the following criterion for the eligibility of vkyc process"
+
+  utter_VkycRepeat:
+  - text: "Once you complete the vkyc process you don't need do it again for next few years"
+
+  utter_greet:
+  - text: "Heyy hope you are doing well, should I start your VKYC verification."
+
+  utter_Notconfirm:
+  - text: "Ok, What is your doubt?."
+
+  utter_randomQ:
+  - text: " Ok, what do you want to know about VKYC."
+
+  utter_name:
+  - text: "Tell me your full name e.g.: Aman Kedar Jadhav."
+
+  utter_Pan Card:
+  - text: "Give me your Pan number."
+
+  utter_state name:
+  - text: "Which state your from?"
+
+  utter_city name:
+  - text: "Which city you from?"
+
+  utter_Gender Type:
+  - text: "Tell me your gender identity e.g.: male, female or others."
+
+  utter_Pincode:
+  - text: "Please tell me your area Pincode."
+
+  utter_Mobile Number:
+  - text: "Give me your 10-digit mobile number."
+
+  utter_aadhaar number:
+  - text: "Give me your 12-digit Aadhaar number."
+
+  utter_Date of Birth:
+  - text: "Give me your birth_date e.g.: 1 February 1997."
+
+  utter_facecapture:
+  - text: "Now, please sit straight and look into the camera for the next 5 sec."
+
+  utter_fcdone:
+  - text: "Great \U0001F600, your face capture has been done successfully. Now I need to capture your Aadhaar card, once you are ready with it give me a confirmation as PROCEED"
+
+  utter_acdn:
+  - text: "Done with the aadhaar card. Now I need to capture your PAN card, once you are ready with it give me a confirmation as PROCEED. 
+          "
+
+  utter_sign:
+  - text: "Ok now hold your signature in-front of the camera for 3 sec. "
+
+  utter_fcf:
+  - text: "Face capture Failed. Please try again."
+
+  utter_acf:
+  - text: "Aadhaar capture Failed. Please try again."
+
+  utter_pcf:
+  - text: "Pan capture Failed. Please try again."
+
+  utter_signf:
+  - text: "Sign capture Failed. Please try again."
+
+  utter_exit:
+  - text: "I am happy to help you thanks."
+
+  utter_WhatVkyc:
+  - text: "vKYC is a secure solution that enables your customers to verify themselves from the comfort of their homes. 
+          It allows you to authenticate customer details in real-time through video & AI-driven face match,
+          geo-tagging, and eKYC verification of your documents."
+
+  utter_doneSC:
+  - text: "Congratulations \U0001F44D Your Video-KYC has been initiated and sent for further approval. 
+          SMS confirmation will be sent to your registered mobile number within 7-10 working days. 
+          Thank you for choosing our service. Have a nice day."
+
+  utter_ReplyToAnswer2A:
+  - text: Please visit the link below \U0001F447 to get complete details.
+
+  utter_ReplyToAnswer2B:
+  - text: https://twitter.com/idrbt?lang=en
+
+  # utter_link:
+  # - text: "Please click this link"
+  #   url: "https://www.google.com/"
+
+  utter_BotAvailibility:
+  - text: "Bot is available 24*7 you can complete vKYC process any time."
+
+  utter_ReplyToAnswer1:
+  - text: I am happy that your satisfied with the answer
+
+  utter_FvideoQNG:
+  - text: "Face video quality is not good. Please sit straight under bright light."
+
+  utter_Avideoqng:
+  - text: "Document Aadhar video quality is not good. Please hold it in-front of the camera."
+
+  utter_PvideoQng:
+  - text: "Document Pan video quality is not good. Please hold it in-front of the camera."
+
+  utter_feedback:
+  - text: Are you satisfied with the explanation ?
+
+  utter_strike1:
+  - text: This is not your {name}, please check your {name} and answer the given question properly.
+
+  utter_strike2:
+  - text: Again you have provided a wrong {name} now you have only one chance left. After that your session will be closed.
+
+  utter_strike3:
+  - text: You have exceed the limit, Goodbye.
+
+  utter_present:
+  - text: You already have provided {name}, please answer the given questions.
+
+  utter_skip:
+  - text: Are you sure you want to skip this question ?
+
+  utter_warn:
+  - text: Remember that You can skip only one question.
+
+  utter_Thanks:
+  - text: Thanks for your Co-operation.
+
+  utter_audiostrike1:
+  - text: Your voice quality is not good, please speak clearly. Only three attempts are given to complete the voice capture.
+
+  utter_audiostrike2:
+  - text: Again your voice quality is not good. Your remained with one last attempt to voice capture.
+
+  utter_audiostrike3:
+  - text: You have completed 3 voice capture attempts. Better luck next time, Goodbye.
+
+  utter_videostrike1:
+  - text: Your document quality is not good, please hold the document under bright light. Only three attempts are given to complete the document capture.
+
+  utter_videostrike2:
+  - text: Again your document quality is not good. Your remained with one last attempt.
+
+  utter_videostrike3:
+  - text: You have completed 3 video capture attempts for document. Better luck next time, Goodbye.
+
+  utter_confirmcapture:
+  - text: Great!! Now we can start your video capturing when you are ready please give confirmation as START or I am READY.
+
+  utter_waitconfirmation:
+  - text: Ok, When you are ready please give me the confirmation.
+
+  utter_interrupt:
+  - text: We are in the middle of vKYC verification, if you have any doubt or query please ask after the completion of verification process.
+
+  utter_rephrase:
+  - text: I can answer you the questions related to video-KYC process only, now try again.
+  
+  utter_skiprepeate:
+  - text: You already have skip one question now please answer the given question.
+
+  utter_skipatstart:
+  - text: First you have to verify the Aadhaar card
+
+  utter_firstaadhaar:
+  - text: I already answer the question, please first verify Aadhaar Number.
+
+  utter_refuse:
+  - text: Alright!, Give me the answer of above Question.
+
+  utter_wronginput:
+  - text: The input you provided is not Aadhaar Number please check your Aadhaar & try again.
+
+  utter_repeateaadhaar:
+  - text: You have already given the Aadhaar Number now please answer the given question.
+
+  utter_askagain1:
+  - text: Should I start your video-KYC process.
+
+  utter_askagain2:
+  - text: Do you have any doubts ?
+
+  utter_verified:
+  - text: I already verify you by asking random questions please proceede to
+          face and documents capture by giving confirmation.
+
+  utter_requestanswer:
+  - text: Please answer given question that mentioned above.
+
+  utter_wrongdoc:
+  - text: You are Providing Document please give correct document mentioned above
+
+  utter_updateverified:
+  - text: Your verification is done. Now you will be directed to the portal to perform the required task you want. 
+
+  utter_finalMsg:
+  - text: Now your session will be closed. Thanks, Goodbye.
+
+  utter_aadhaarstrike1:
+  - text: You have given a wrong Aadhaar number, I need your registered Aadhaar number to proceed.
+          Now please try again. After 3 wrong attempts chatbot will shutdown.
+
+  utter_aadhaarstrike2:
+  - text: Again you have given a wrong aadhaar number. Your remained with one last attempt. 
+
+  utter_aadhaarstrike3:
+  - text: You have exceeded the limit for aadhaar number. Better luck next time, Goodbye
+
+  utter_suggest:
+  - text: Please answer the given question, If you can't answer this question you can skip this question
+
+  utter_middleprocess:
+  - text: We are already in the process please answer the given questions.
+
+  utter_waitdirecting:
+  - text: Please be Petient we redirecting to you portal for further process
+
+  utter_completeagain:
+  - text: You already complete KYC process, If you have any doubts please ask
+
+  utter_waitconfirmation1:
+  - text: You already give answer of three questions please give us confirmation so we can proceed further
+
+  utter_repeatlimit:
+  - text: You Already cross the limit of asking same question please try later.
+
+  utter_aboutinfo:
+  - text: All information related VKYC process mentioned in the above link please visit the link
+
+  utter_angry:
+  - text: I apologize if my previous explanation didn't meet your expectations or fully address your concern.
+
+  utter_requestaadhaar:
+  - text: PLease give aadhaar card number
+
+  utter_responseAfterLink:
+  - text: Hope your satisfied with information provided. Now we will start your VKYC process. Give me your 12-digit aadhaar number. 
+
+
+actions:
+  - action_welcome_msg
+  - action_Que_Selection
+  - action_verify_aadhaar
+  - action_video_capture
+  - action_FAQ
+  - action_skip_question
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+
+# attachments:
+#   utter_link:
+#   - text: "[Here link you get more info](https://twitter.com/idrbt?lang=en)"
+
+  # utter_pdf:
+  #   - text: "Here is the PDF."
+  #     custom: 
+  #       payload: pdf_attachment
+  #       title: "PDF Title"
+  #       url: "URL to PDF file"

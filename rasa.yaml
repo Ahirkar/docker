@@ -1,0 +1,57 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: rasa
+  name: rasa
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: rasa
+  template:
+    metadata:
+      labels:
+        app: rasa
+    spec:
+      containers:
+        - name: rasa
+          image: rasa:u2
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 5005
+          command:
+            - "rasa"
+            - "run"
+            - "-m"
+            - "models"
+            - "--enable-api"
+            - "--cors"
+            - "*"
+            - "--port"
+            - "5005"
+            - "--debug"
+            - "--endpoints"
+            - "/app/config/endpoints.yml"
+            - "--log-file"
+            - "out.log"
+            - "--debug"
+          resources: {}
+          volumeMounts:
+            - mountPath: /app/config
+              name: rasa-config-volume
+            - mountPath: /app/models
+              name: rasa-claim0
+            - mountPath: /app/index.html
+              name: rasa-claim1
+      restartPolicy: Always
+      volumes:
+        - name: rasa-config-volume
+          configMap:
+            name: rasa-config
+        - name: rasa-claim0
+          persistentVolumeClaim:
+            claimName: rasa-claim0
+        - name: rasa-claim1
+          persistentVolumeClaim:
+             claimName: rasa-claim1

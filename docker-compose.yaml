@@ -1,0 +1,113 @@
+version: '3'
+services:
+    react_js:
+      #image: koredla25/rasa_rasa_flask:latest5.3
+      #restart: always
+      container_name: "reactjs"
+      networks: [ 'rasa-network' ]
+      user: root
+      build:
+        context: .
+        dockerfile: ./node1.Dockerfile
+      deploy:
+        replicas: 1
+      #volumes:
+       # - "./:/app"
+        #-  "/app/node_modules"
+      #devices:
+       # - "/dev/video0:/dev/video0"
+      ports:
+          - "3000:3000"
+      #command: RUN pip install -r requirements.txt
+      #entrypoint: ["python"]
+      #command: ["app.py"]
+      depends_on:
+         - rasa
+         - action-server
+         - data_extraction
+       #  - nginx
+
+    rasa:
+      #image: koredla25/rasa_rasa:latest5.3
+      #restart: always
+      container_name: "rasa_server"
+      networks: [ 'rasa-network' ]
+      user: root
+      build:
+        context: .
+        dockerfile: ./node2.Dockerfile
+      volumes:
+        - ./models:/app2/models
+        - ./index.html:/app2/index.html
+      ports:
+        - "5005:5005"
+      deploy:
+        replicas: 1
+    action-server:
+      #image: koredla25/rasa_action_server:latest5.3
+      #restart: always
+      container_name: "action"
+      networks: [ 'rasa-network' ]
+      build:
+        context: actions
+        dockerfile: ./Dockerfile
+      #volumes:
+       # - "./actions:/app/actions"
+        #- "./data:/app/data"
+      ports:
+        - "5055:5055"
+      deploy:
+        replicas: 1
+    data_extraction:
+      container_name: "Extraction1"
+      networks: [ 'rasa-network' ]
+      build:
+        context: data_extraction
+        dockerfile: ./Dockerfile
+      ports:
+        - "5006:5006"
+      deploy:
+        replicas: 1
+
+  #      - rasa
+#      - action_server
+#      - data_extraction
+    web:
+      image: nginx:latest
+      restart: always
+      container_name: "web_server"
+      networks: [ 'rasa-network' ]
+ #     build:
+#        context:
+#       image: nginx:1.13
+#      #restart: always
+      ports:
+        - "80:80"
+      depends_on:
+        - react_js
+#       - "443:443"
+      deploy:
+        replicas: 1
+        #      environment:
+#        NODE_ENV: development
+     # volumes:
+        # - "$ROOT/certs:/certs"
+       #  - ./nginx/conf.d:/etc/nginx/conf.d
+
+
+   # nginx:
+    #  image: nginx
+     # networks: [ 'rasa-network' ]
+     # ports:
+      #  - "80:80"
+
+
+
+networks: {rasa-network: {}}
+
+
+
+
+
+
+

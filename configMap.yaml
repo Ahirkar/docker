@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: rasa-config
+data:
+  endpoints.yml: |
+    action_endpoint:
+      url: "http://action-server:5055/webhook"

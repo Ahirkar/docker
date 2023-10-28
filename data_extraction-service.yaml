@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    kompose.cmd: kompose convert -f docker-compose.yaml
+    kompose.version: 1.28.0 (c4137012e)
+  creationTimestamp: null
+  labels:
+    app1: data-extraction
+  name: data-extraction
+  namespace: default
+spec:
+  type: NodePort
+  ports:
+    - name: "5006"
+      port: 5006
+      targetPort: 5006
+      nodePort: 30082
+  selector:
+    app1: data-extraction
+status:
+  loadBalancer: {}

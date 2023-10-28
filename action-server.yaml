@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: action-server
+  name: action-server
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: action-server
+  template:
+    metadata:
+      labels:
+        app: action-server
+    spec:
+      containers:
+        - name: action-server
+          image: action:a1
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 5055
+          resources: {}
+          volumeMounts:
+            - mountPath: /app/config/endpoints.yml
+              name: rasa-config-volume
+              subPath: endpoints.yml
+              readOnly: true
+      restartPolicy: Always
+      volumes:
+        - name: rasa-config-volume
+          configMap:
+            name: rasa-config

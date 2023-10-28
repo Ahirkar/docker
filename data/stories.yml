@@ -1,0 +1,84 @@
+version: "3.1"
+
+stories:
+
+- story: path4
+  steps:
+  - or:
+    - intent: Aadhaar Number
+      entities:
+      - AdharNo: 123456789101
+    - intent: Update
+    - intent: Consent
+    - intent: Forget Password
+    - intent: Know Info
+  - action: action_verify_aadhaar
+  - or:
+    - intent: Repeat Question
+    - intent: name
+      entities:
+      - usrNam: sachin ramesh tendulkar
+    - intent: Pan Number
+    - intent: pincode
+    - intent: gender
+      entities:
+      - genderType: male
+    - intent: State
+    - intent: Mobile Number
+      entities:
+      - Mobile Number: 8695741236
+    - intent: Date of Birth
+      entities:
+      - bid: 20 may 1999
+    - intent: City
+      entities:
+      - CityName: nagpur
+  - action: action_Que_Selection
+
+
+- story: FAQ
+  steps:
+  - or:
+    - intent: greet
+    - intent: Out Of Box Questions
+    - intent: Time required
+    - intent: Why Vkyc
+    - intent: Required Documents
+    - intent: KYC Process
+    - intent: Question about Data
+    - intent: Vkyc Timecycle
+    - intent: Post Vkyc
+    - intent: eligibility
+    - intent: Bot availbility
+    - intent: Vkyc Repeat
+    - intent: What Vkyc
+    - intent: Registration Completion
+    - intent: Device
+  - action: action_FAQ
+
+
+- story: video capture/kyc verificaction
+  steps:
+  - or:
+    - intent: confirm
+    - intent: Start KYC
+    - intent: Notconfirm
+    - intent: More Info
+    - intent: Doubts
+  - action: action_video_capture
+
+
+- story: skip question
+  steps:
+  - intent: Skip question
+  - action: action_skip_question
+  - or:
+    - intent: name
+    - intent: Pan Number
+    - intent: pincode
+    - intent: gender
+    - intent: State
+    - intent: Mobile Number
+    - intent: Date of Birth
+    - intent: City
+  - action: action_Que_Selection

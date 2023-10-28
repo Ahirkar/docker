@@ -1,0 +1,74 @@
+#apiVersion: apps/v1
+#kind: Deployment
+#metadata:
+#  annotations:
+#    kompose.cmd: kompose convert -f docker-compose.yaml
+#    kompose.version: 1.28.0 (c4137012e)
+#  creationTimestamp: null
+#  labels:
+#    app2: rasa
+#  name: rasa
+#  namespace: default
+#spec:
+#  replicas: 1
+#  selector:
+#    matchLabels:
+#      app2: rasa
+#  strategy:
+#    type: Recreate
+#  template:
+#    metadata:
+#      annotations:
+#        kompose.cmd: kompose convert -f docker-compose.yaml
+#        kompose.version: 1.28.0 (c4137012e)
+#      creationTimestamp: null
+#      labels:
+#        io.kompose.network/june-15-rasa-rasa-network: "true"
+#        app2: rasa
+#    spec:
+#      containers:
+#        - name: rasa
+#          image: rasa-server:s1
+#          imagePullPolicy: Never
+#          ports:
+#            - containerPort: 5005
+#          command: ["rasa","run","-m","models","--enable-api","--cors","*","--port","5005","--debug" ,"--endpoints", "endpoints.yml","/app/config/endpoints.yml" ,"--log-file", "out.log", "--debug"]
+#
+#          #      imagePullSecrets:
+##        - name: k8s-secret
+##      containers:
+##        - image: nikhilsg/nick_007:a6
+##          name: rasa
+##          ports:
+##            - containerPort: 5005
+#          resources: {}
+#          volumeMounts:
+##            - mountPath: /app2/models
+##              name: rasa-claim0
+##            - mountPath: /app2/index.html
+##              name: rasa-claim1
+#            - mountPath: endpoints.yml   # Mounting endpoints.yml from ConfigMap
+#              name: rasa-config-volume
+#              #subPath: endpoints.yml   # Mounting specific file from the ConfigMap
+#      restartPolicy: Always
+#      volumes:
+##        - name: rasa-claim0
+##          persistentVolumeClaim:
+##            claimName: rasa-claim0
+##        - name: rasa-claim1
+##          persistentVolumeClaim:
+##            claimName: rasa-claim1
+#        - name: rasa-config-volume   # ConfigMap volume for endpoints.yml
+#          configMap:
+#              name: rasa-config   # Reference to the ConfigMap
+##          readinessProbe:
+##            httpGet:
+##              path: /
+##              port: 5005
+##            initialDelaySeconds: 5
+##            periodSeconds: 5
+##            successThreshold: 1
+##            envFrom:
+##              - configMapRef:
+##                  name: kube-root-ca.crt
+#status: {}

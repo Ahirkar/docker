@@ -1,0 +1,7 @@
+paddlepaddle==2.4.1
+paddleocr>==2.6.1.2
+flask
+opencv-python
+whisper
+keras
+tensorflow==2.11.1

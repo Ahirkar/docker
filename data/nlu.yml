@@ -1,0 +1,1726 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - hey there
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: confirm
+  examples: |
+    - yes
+    - ok
+    - yaah
+    - okk
+    - sure
+    - okey
+    - let's proceed kyc
+    - why not
+    - indeed
+    - of cource
+    - confirm
+    - satisfied
+    - this explaination is good for me
+    - i am ok with this
+    - i am happy with is informatiom
+    - you give me satisfied answer thanks
+    - thanks its ok for me
+    - thank for explaination
+    - you explained very well
+    - i am satisfied
+    - you done good job
+    - i am ready
+    - lets start
+    - lets begine
+    - proceed
+    - start
+    - ready
+
+- intent: Notconfirm
+  examples: |
+    - no
+    - not
+    - i am not ready
+    - wait
+    - stop
+    - do not start
+    - please wait
+    - wait for while
+    - not now
+    - don't start now
+    - wait for my confirmation
+    - i am not sure please wait
+    - Hold on
+    - Hang tight
+    - Stay put
+    - i am not ready please hold for while
+    - I'm unprepared
+    - I'm not fully ready
+    - I'm not in a position to go ahead
+    - Wait a moment
+    - I'll be right back
+    - give a moment
+    - Hang on
+    - just a sec
+    - Stay right there
+
+
+- intent: Doubts
+  examples: |
+    - i have a question related to vkyc
+    - i want to ask a question related to vkyc   
+    - i have a query
+    - can i ask a question 
+    - i have doubts
+    - i need some information
+    - i want information
+    - i want to know something
+    - can you help me i have some doubts
+    - i come to know some explaination
+    - i want explaination
+    - do you help me
+    - i got stuck
+    - need information from your side
+    - would you help me i litle bit confuse
+    - can you this explain to me
+    - i am stuck in the middle can you help me out
+    - i have some doubt
+    - give me some info
+    - can you help me
+
+
+- intent: More Info
+  examples: |
+    - i need more explaination
+    - can you explain little bit more
+    - no you have to give more information
+    - would you give me more about it
+    - i am not satisfied
+    - you have to give me explaination this is not enough for me
+    - not enough for me
+    - give more information about it
+    - still i am not satisfied you have to provide more information
+    - not enough information give me some more
+    - not understand please explain me properly
+    - need more information
+    - i am still confuse need more information to understand it
+    - is there any source to give more information about it to understand more kyc
+    - i need additional information
+    - give alternate souces about vkyc
+    - if you have better resources please provide me
+    - give me official link where i can get proper information
+    - if you have link related this question give that link
+    - from this information i am unable to understand please expalain properly
+    - may be you can provide other source or link about vkyc process
+    - information little bit confusing explain more
+
+- intent: User angry
+  examples: |
+    - this is not helping me
+    - explaination is not my satisfaction level give more information
+    - you are not explaining properly
+    - you are not giving the explaination what i want
+    - you are useless give incorrect information
+    - are you mad this is not information i want
+    - i think you are not going to help
+    - this is not correct informatiom
+    - are you crazy what information you are giving to me
+    - i thing your are wrong
+    - wrong explaination
+    - incorrect information
+    - please check your information i think its not correct
+    - you think this correct check once again then give information
+    - what are thinking while giving this explaination improper explaination
+    - the explaination provide related to the VKYC i think is incorrect
+    - kyc related information is wrong
+    - wrong Vkyc info
+    - please give correct info
+    - info not right
+    - unsatisfactory information about kyc process
+    - wrong explaination about kyc
+    - not satisfied
+    - not happy with it
+    - this is not satisfactory information
+
+- intent: Start KYC
+  examples: |
+    - proceed to VKYC verification
+    - vkyc verification
+    - proceed to vkyc
+    - Start my KYC process
+    - let's proceed kyc
+    - start know your customer
+    - start process
+    - start verification
+    - now you can start
+    - start this video kyc
+    - please proceed my video kyc
+    - begine process
+    - start KYC
+    - Complete my vkyc verification
+    - i want to do my vkyc verification
+    - start process kyc process
+
+- intent: What Vkyc
+  examples: |
+    - What is VKYC 
+    - Can you give me some background on KYC
+    - Can you tell me some facts about VKYC
+    - Can you give me a general idea of KYC
+    - What can you share about VKYC and its role in financial institutions
+    - Can you brief me on the VKYC process
+    - Can you give me a brief on VKYC
+    - Can you give me an overview of KYC
+    - What can you tell me about the process of VKYC
+    - what information take during the vkyc session
+    - What is vkyc
+    - Can you provide me with some details about VKYC
+    - Can you tell me more about VKYC and its significance
+    - Can you give me an explanation of KYC
+    - Can you share your knowledge on KYC
+    - Tell me something about vkyc
+    - What do you know about VKYC
+    - Can you provide me with some information on KYC compliance
+    - Can you provide me with some insights about KYC
+    - Can you give me an overview of the VKYC process and its importance
+    - Can you give me some information about VKYC
+
+- intent: PostVKYC
+  examples: |
+    - Where do I have to go after vkyc
+    - What should be my next move after completing VKYC
+    - What are the next steps after completing VKYC
+    - what should i do after vkyc process
+    - Can you guide me on what to do after I complete KYC
+    - What are the next steps in the process after completing KYC
+    - What should I do once I have completed KYC
+    - What are the subsequent steps to take after VKYC is completed
+    - After vkyc what is next
+    - what is the process after completing vkyc session
+    - My vkyc process is complete now where should I go
+    - What are the necessary steps to follow after completing KYC
+    - Can you tell me what I should do after completing KYC
+    - I complete my vkyc what should i do next
+    - is this registration valid forever
+    - What actions should I take after finishing KYC
+
+- intent: Out Of Box Questions
+  examples: |
+    - can you order a pizza for me 
+    - can you order a burger for me 
+    - order a dosa for me 
+    - order a idli 
+    - book a ticket for me 
+    - can you book a train ticket for me 
+    - book a movie ticket for me 
+    - book a plane ticket 
+    - what is the weather today
+    - who developed this bot
+    - who is the father of this bot
+    - tell me your specifications
+    - play a song for me
+    - play music for me
+    - who will win the world cup
+    - what all the things you can do
+    - who developed you
+    - who made you
+    - why global warming is happening
+    - which is difficult match or physics
+    - tell me my todays horoscope
+    - when india got freedom
+    - where is the office of this vkyc
+    - who controls vkyc
+    - who is managing this vkyc
+    - who develope you
+    - where your developed  
+    - which company developed you
+    - give me your details
+    - tell me about your specifications 
+    - how you work
+    - what are the techonolgies you use to answer
+    - are you based on AIML aiml deep learning
+
+
+- intent: Time required
+  examples: |
+    - i want to know how much time this vkyc will take to complete
+    - Actually I want to know about what is this VKYC
+    - how much time it will take
+    - how much time it will take to complete
+    - tell me the time required for vkyc completion
+    - is this long process
+    - is vkyc take longer time for completion
+    - what is total duration of vkyc process
+    - is take more than one hour for vkyc
+
+
+- intent: Required Documents
+  examples: |
+    - Which documents are required for vkyc
+    - Give me the list of documents required for vkyc
+    - Tell me something about the documents required to complete this vkyc
+    - what are the requirements of vkyc
+    - which documents are required for video kyc completion
+    - Can you provide me with the requirements for KYC
+    - is bank passbook required for vkyc
+    - Can you give me the list of documents required for VKYC
+    - is aadhaar card necessary for kyc process
+    - Can you inform me about the paperwork needed for KYC
+    - is the address proof required for vkyc session
+    - Document list for vkyc
+    - while doing kyc which document should I bring for verification
+    - What are the KYC documentations that must be submitted
+    - can I do vkyc using my passport
+    - Can you give me a list of the documents needed for KYC
+    - Can you let me know the documents required for KYC process
+    - I need to know what documents are mandatory for VKYC
+    - What are the documentations required for VKYC process
+    - What are the VKYC documentations that are required
+    - Can you tell me what documents I need to provide for VKYC
+    - What are the necessary documents for completing the VKYC process
+    - Can you inform me of the necessary documents for VKYC
+    - Can you tell me the papers needed for VKYC
+    - what are  documents required for vkyc
+    - What is the list of documents needed for KYC
+    - What are the necessary documents for completing VKYC
+    - What are the papers required for VKYC
+    - What are the documents that are mandatory for KYC
+    - What are the KYC documentations that I need to submit
+    - is pan card required for vkyc facility
+    - can I do my kyc using voter id
+
+- intent: Requisites
+  examples: |
+    - Who can do kyc
+    - what are eligibility criterioCan you give me some information about VKYC for vkyc
+    - For vkyc bank account is necessary
+    - criterion for kyc
+    - can under 18  person eligible for kyc
+    - I am minor can I eligible for the vkyc facility
+    - eligibility for vkyc facility
+    - What are prerequisites for kyc
+    - I am NRI person am I eligible for vkyc process
+
+
+- intent: Why Vkyc
+  examples: |
+    - Why VKYC
+    - why to do this video kyc vkyc
+    - What is the significance of vkyc
+    - What is the goal of KYC
+    - Why is VKYC a mandatory process
+    - why should i complete vkyc 
+    - What is the intended use of KYC
+    - Why is KYC important
+    - Why is it necessary to complete KYC
+    - What is the reasoning behind conducting VKYC process
+    - What is the importance of KYC in financial institutions
+    - What is the aim of KYC compliance
+    - What are the objectives of VKYC
+    - Without vkyc can I open my bank account
+    - What is the goal of conducting KYC
+    - Why is it essential to go through KYC process
+    - why should i complete kyc
+    - What is the reasoning behind KYC
+    - What is the function of KYC
+    - What is the rationale behind KYC process
+    - What is the role of VKYC in ensuring compliance with regulations
+    - what is purpose of kyc
+    - What can you tell me about VKYC
+    - What are the benefits of completing VKYC
+    - What is the objective of conducting VKYC checks
+    - Can you elaborate on KYC
+    - Can you give me an understanding of KYC
+    - What is the main objective of KYC process
+    - Why is KYC a mandatory requirement
+
+
+- intent: KYC Process
+  examples: |
+    - Queries about VKYC process
+    - queries about vkyc process
+    - I have queries about vkyc process
+    - i have queries about vkyc process
+    - query about vkyc
+    - I would like to have a full understanding of the VKYC process, can you provide me the complete details
+    - Can you give me the complete rundown of the VKYC process
+    - Can you elaborate on the complete KYC process for me
+    - I am looking for the complete information on the KYC process, can you give me that
+    - give me complete roadmap for vkyc
+    - I am interested in having the complete information on the VKYC process Can you provide me with that
+    - Can you furnish me with all the information related to the VKYC process
+    - I am interested in knowing the entire process of KYC, can you provide me the details
+    - can you provide me the complete details of the vkyc process
+    - Can you give me the comprehensive details of the VKYC process
+    - I am looking for a comprehensive guide on the KYC process, can you provide me with that
+    - I want to do kyc how can I do it
+    - Can you give me a comprehensive overview of the KYC process
+    - I need to understand the complete KYC process, can you help me with that
+    - Procedure for vkyc
+    - I would like to know the complete details of the KYC process, can you provide them to me
+    - I would like to have the complete information on the VKYC process, can you give me that
+    - Is there standard procedure for vkyc
+    - Can you give me a detailed explanation of the KYC process
+    - What are the steps in kyc process
+    - Can you give me all the information on the KYC process from start to finish
+    - Can you walk me through the entire VKYC process and provide me with all the necessary information
+    - Can you provide me all the details about the KYC process
+    - I need to know the step-by-step process of VKYC, can you give me the complete details
+    - Can you give me a complete rundown of the KYC process, including all the necessary steps
+    - In vkyc process can they capture my face
+    - I am seeking the complete details on the VKYC process, can you give me that information
+    - tell me the steps of video kyc
+    - steps of vkyc
+    - how to do this vkyc
+    - can you tell me what are the steps involved in kyc process
+
+
+- intent: Question about Data
+  examples: |
+    - is my data safe with you
+    - how you use my data
+    - my data is safe with you
+    - is any threat to my data
+    - is there any possibility data can stolen
+    - how my data is protected
+    - is my data is leak proof
+    - who can access my information related to video kyc
+    - are bank can access the data
+    - is the finacial institution have authority to use my data
+    - is that true that bank have permission to use my infromation
+    - what are data safty measure you take
+    - who take data protection responsibility
+    - where my data will stored
+    - what are step you take to protect my data
+    - are th my documents are safe
+    - where store my documents
+    - who can use my documents
+    - is there any possibility that my can be misused
+    - who can access my data or documents
+    - can you explain how my documents are safe
+    - what is your data protection policy
+    - who can use my aadhaar card
+    - how you give assurity that my documents secured
+    - is my pan card is safe
+    - where you store my biomatrics
+    - how you secured my biomatrics
+
+
+- intent: name
+  examples: |
+    - My Name is [Kamal Kishor Kadam]{"entity": "usrNam"}
+    - I am [anil kumar jadhav]{"entity": "usrNam"}
+    - call me as [J.krishnamurthy{"entity": "usrNam"}
+    - [amish keshav patel]{"entity": "usrNam"}
+    - my name is [Madhavi Anil Sharma]{"entity": "usrNam"}
+    - i am [Kehav Puram Sudame]{"entity": "usrNam"}
+    - [Sushila Amit Gupta]{"entity": "usrNam"}
+    - [Anita Suyog Singhal]{"entity": "usrNam"}
+    - my name is [Madhavi Anil Sharma]{"entity": "usrNam"}
+    - [Bhaskar Suraj Sharma]{"entity": "usrNam"}
+    - [Kedar Keshav Jadhav]{"entity": "usrNam"}
+    - [Vijay Shyam Deverakonda]{"entity": "usrNam"}
+    - [Milind Kedar Somani]{"entity": "usrNam"}
+    - I am known as [vijay dinanath chauhan]{"entity": "usrNam"}
+    - [karan vimal kesari]{"entity": "usrNam"} is the moniker I am referred to as
+    - You can call me [pallavi suresh agarwal]{"entity": "usrNam"}
+    - [pranoti sandeep pandey]{"entity": "usrNam"} is the handle I go by
+    - [naussin khan]{"entity": "usrNam"} is the name I go by
+    - My handle is [kedar]{"entity": "usrNam"}
+    - [prajakta prakash purohit]{"entity": "usrNam"} is the name that I am called by
+    - [sakshi vikram shetye]{"entity": "usrNam"} is the title I am addressed as
+    - [vijay dinanath patil]{"entity": "usrNam"} is the label I am identified by
+    - [Abhitha shivam koredla]{"entity": "usrNam"}
+    - [Adalarachan vinod Chabra]{"entity": "usrNam"}
+    - [Adaleru vinod Reddy]{"entity": "usrNam"}
+    - [Asistha Adhibu Rao]{"entity": "usrNam"}
+    - [Bhaanupriya Kuppuram Iyer]{"entity": "usrNam"}
+    - [Mooppan Kuppuram Mani]{"entity": "usrNam"}
+    - [Nakkiran Nalladurai Iyengar]{"entity": "usrNam"}
+    - [Nallappa Nallamuthu Nadar]{"entity": "usrNam"}
+    - [Parushi Nithilesh Namboothiri]{"entity": "usrNam"}
+    - [Prahasini Adithan Achari]{"entity": "usrNam"}
+    - [Habib Jamal Ahmed]{"entity": "usrNam"}
+    - [Fajr Abraham Ali]{"entity": "usrNam"}
+    - [Aamira Zarrar Atallah]{"entity": "usrNam"}
+    - [Ziyad Ateeb Badie]{"entity": "usrNam"}
+    - [Barraq Faiq Bashir]{"entity": "usrNam"}
+    - [Ghazal Obaid Darwish]{"entity": "usrNam"}
+    - [Waahid Qaadir Faraj]{"entity": "usrNam"}
+    - [Faatin Faarooq Hana]{"entity": "usrNam"}
+    - [Maab Ibadat Mina]{"entity": "usrNam"}
+    - [Naajidah Daaruk Hasan]{"entity": "usrNam"}
+    - [Daba Faadil]{"entity": "usrNam"}
+    - [Wadood Minhas]{"entity": "usrNam"}
+    - [Balwinder Bajwa]{"entity": "usrNam"}
+    - [Udham Singh]{"entity": "usrNam"}
+    - [Ishaan Chawla]{"entity": "usrNam"}
+    - [Yuvraj Singh]{"entity": "usrNam"}
+    - [Aabir Qasim]{"entity": "usrNam"}
+    - [Loveleen Kaur Mann]{"entity": "usrNam"}
+    - [Rajvir Kaur Sidhu]{"entity": "usrNam"}
+    - [FRajvir Kaur Sidhu]{"entity": "usrNam"}
+    - [Paramjit Singh Sandhu]{"entity": "usrNam"}
+    - [Simranjit Singh Toor]{"entity": "usrNam"}
+    - [Tejinder Kaur Virk]{"entity": "usrNam"}
+
+- regex: bid
+  examples: |
+    - (?P<day>\d{1,2})(?:st|nd|rd|th)?\s+(?P<month>\w+)\s+(?P<year>\d{4})
+
+- intent: Date of Birth
+  examples: |
+    - my birth date is [10 january 1990]{"entity": "bid"}
+    - [10 december 1993]{"entity": "bid"}
+    - i was born on [20 August 2002]{"entity": "bid"}
+    - [2 February 1998]{"entity": "bid"}
+    - [3 march 1970]{"entity": "bid"}
+    - [30th October 1999]{"entity": "bid"}
+    - The day I celebrate my birthday is [30th october 1999]{"entity": "bid"}
+    - [10 January 1990]{"entity": "bid"} is my date of birth.
+    - The day I came into this world was [25th october 1998]{"entity": "bid"}
+    - My birthdate is [5th january 1961]{"entity": "bid"}.
+    - I mark my birthday on the [24th june 2001]{"entity": "bid"}
+    - On [15th may 2006]{"entity": "bid"}, I was born.
+    - [2nd april 1975]{"entity": "bid"} is when I was brought into this world.
+    - The date that signifies my birth is [31th march 1996]{"entity": "bid"}
+    - [2 june 1559]{"entity": "bid"}
+    - [29 feb 1968]{"entity": "bid"}
+    - [12 jan 1996]{"entity": "bid"}
+    - [25th apr 2000]{"entity": "bid"}
+    - [17 oct 2012]{"entity": "bid"}
+    - [1st Dec 2019]{"entity": "bid"}
+    - [4 nov 1975]{"entity": "bid"}
+    - [15th aug 1660]{"entity": "bid"}
+    - [30 Sept 1998]{"entity": "bid"}
+    - [31st july 2006]{"entity": "bid"}
+    - [23 mar 1997]{"entity": "bid"}
+
+- regex: AdharNo
+  examples: |
+    - \d{12,12}
+- intent: Aadhaar Number
+  examples: |
+    - My aadhaar number is [129474870643]{"entity": "AdharNo"}
+    - my aadhaar no. is [129474870654]{"entity": "AdharNo"}
+    - I Have below aadhaar number [579054870643]{"entity": "AdharNo"}
+    - I use [439054870643]{"entity": "AdharNo"} this number
+    - [229054870643]{"entity": "AdharNo"} Save this as my adhaar number
+    - my aadhar no. [369852147852]{"entity": "AdharNo"}
+    - my adhar no. [365952147852]{"entity": "AdharNo"}
+    - adhar no. [145236527892]{"entity": "AdharNo"}
+    - Aadhaar number [123456789321]{"entity": "AdharNo"}
+    - [253918025634]{"entity": "AdharNo"}
+    - My Aadhaar no.is [123456789321]{"entity": "AdharNo"}
+    - [259054870643]{"entity": "AdharNo"}
+    - [388790654217]{"entity": "AdharNo"}
+    - [963215963579]{"entity": "AdharNo"} This is the number linked to my aadhaar card
+    - aadhaar number [614832697852]{"entity": "AdharNo"}
+    - My unique identification code is [102369512037]{"entity": "AdharNo"}
+    - You can find my adhaar information under this number [563078419623]{"entity": "AdharNo"}
+    - This is my aadhaar identification [469359067196]{"entity": "AdharNo"}
+    - My aadhaar identification number is [936489523698]{"entity": "AdharNo"}
+    - Save this as my adhaar number [818169359030]{"entity": "AdharNo"}
+    - You can locate my aadhar details with this number [203985678961]{"entity": "AdharNo"}
+    - [931503984621]{"entity": "AdharNo"} This is the number associated with my adhar profile 
+    - My UID (Unique Identification Number) is [903493156792]{"entity": "AdharNo"}
+
+- regex: panNum
+  examples: |
+    - [A-Z]{3}[A-Z]{1}[A-Z]{1}[0-9]{4}[A-Z]{1}
+    
+- intent: Pan Number
+  examples: |
+    - [BRGHP8706T]{"entity": "panNum"}
+    - [HTGHP8706Y]{"entity": "panNum"}
+    - my pan no.is [GTRDE9734H]{"entity": "panNum"}
+    - My pan number is [HRGHP8706I]{"entity": "panNum"}
+    - I Have below pan number [WSGHG8706O]{"entity": "panNum"}
+    - I use [KTGHP8706Y]{"entity": "panNum"} this number
+    - Save this as my pan number [YTGHP8706F]{"entity": "panNum"}
+    - [BGTRF4534W]{"entity": "panNum"}
+    - [ERGHU9606I]{"entity": "panNum"}
+    - This is my PAN card number [AFTSF8181C]{"entity": "panNum"}
+    - My permanent account number for taxes is [TOHSI7056Q]{"entity": "panNum"}
+    - My tax identification number is [JMBDN9624G]{"entity": "panNum"}
+    - This is the number associated with my PAN profile [LMBVZ5910I]{"entity": "panNum"}
+    - You can locate my PAN details with this number [XFURC0456M]{"entity": "panNum"}
+    - This is the number of my PAN card for financial transactions [ZFYRW7535H]{"entity": "panNum"}
+    - This is the number linked to my PAN card [VMPRO2987K]{"entity": "panNum"}
+    - My personal account number for taxes is [HBDSS5397D]{"entity": "panNum"}
+    - I am using [HKFSH7854Y]{"entity": "panNum"} this pan number
+    - here is my pan card [OYRET79145R]{"entity": "panNum"}
+    - [OIUOD5545E]{"entity": "panNum"} is my permant account number
+    - [SFDAF9301J]{"entity": "panNum"} this pan card i use everywhere
+
+- regex: genderType
+  examples: |
+    - \b(male|female|other|others)\b
+
+- intent: gender
+  examples: |
+    - [male]{"entity": "genderType"}
+    - i am [male]{"entity": "genderType"}
+    - [other]{"entity": "genderType"}
+    - [Male]{"entity": "genderType"}
+    - [female]{"entity": "genderType"}
+    - i am [other]{"entity": "genderType"}
+    - my gender is [male]{"entity": "genderType"}
+    - i am [female]{"entity": "genderType"}
+    - [Female]{"entity": "genderType"}
+    - [Other]{"entity": "genderType"}
+    - I am of the [female]{"entity": "genderType"} gender
+    - I consider myself [female]{"entity": "genderType"}
+    - I am a [man]{"entity": "genderType"}
+    - I identify as a [woman]{"entity": "genderType"}
+    - I identify as a [man]{"entity": "genderType"}
+    - I am a [man]{"entity": "genderType"} in terms of gender identity
+    - My assigned gender at birth is [female]{"entity": "genderType"}
+
+
+- intent: exit
+  examples: |
+    - good by
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - Thanks
+    - thank you
+    - thanks by
+    - thank you bye
+    - see you 
+    - talk you later
+    - have good day
+    - cu
+
+
+- regex: Pincode
+  examples: |
+    - \d{6,6}
+
+- intent: pincode
+  examples: |
+    - my pincode no. is [411005]{"entity": "Pincode"}
+    - [435684]{"entity": "Pincode"} is my pincode number
+    - my pincode number is [435684]{"entity": "Pincode"}
+    - [535688]{"entity": "Pincode"} is pincode. no.
+    - my pincode no.is [335688{"entity": "Pincode"}
+    - [235680]{"entity": "Pincode"} this is my pincode no.
+    - [635687]{"entity": "Pincode"} my pincode no.
+    - my pincode [135685]{"entity": "Pincode"}
+    - [735686]{"entity": "Pincode"}
+    - The postal code associated with me is [629785]{"entity": "Pincode"}
+    - I can be located using the pincode [896320]{"entity": "Pincode"}
+    - My address can be identified by the pincode [307856]{"entity": "Pincode"}
+    - The pincode that corresponds to my location is [931026]{"entity": "Pincode"}
+    - The pincode that belongs to me is [567896]{"entity": "Pincode"}
+    - [520369]{"entity": "Pincode"}
+    - [129873]{"entity": "Pincode"}
+    - [980348]{"entity": "Pincode"}
+    - [934091]{"entity": "Pincode"}
+
+    
+
+- regex: Mobile Number
+  examples: |
+    - \d{10,10}
+
+- intent: Mobile Number
+  examples: |
+    - [9197806475]{"entity": "Mobile Number"}
+    - My mobile number is [9147806447]{"entity": "Mobile Number"}
+    - [9075432178]{"entity": "Mobile Number"} this my mobile no.
+    - My number is [9147807652]{"entity": "Mobile Number"}
+    - My number [9147806908]{"entity": "Mobile Number"}
+    - [9195704447]{"entity": "Mobile Number"}
+    - [8997807137]{"entity": "Mobile Number"}
+    - my mob.no. [8925475632]{"entity": "Mobile Number"}
+    - my mob.no.is [9158475232]{"entity": "Mobile Number"}
+    - You can contact me at my mobile number [8652963150]{"entity": "Mobile Number"}
+    - My cellular phone number is [8941237503]{"entity": "Mobile Number"}
+    - To reach me, dial my mobile number [8235416974]{"entity": "Mobile Number"}
+    - The contact number that belongs to me is my mobile number [8102359640]{"entity": "Mobile Number"}
+
+- intent: Vkyc Repeat
+  examples: |
+    - Do I have to go through KYC again at the bank
+    - Do I have to repeat vkyc again in the bank
+    - Is it a requirement to re-do KYC in the bank
+    - Do I have to submit VKYC documents again to the bank
+    - Is it mandatory to complete KYC once more at the bank
+    - Do I have to complete KYC once more in the bank
+    - Is it necessary to redo VKYC in the bank
+    - Do I need to reapply for KYC at the bank
+    - Do I have to redo KYC process at the bank again
+    - Is it mandatory to repeat VKYC in the bank
+    - Do I need to re-submit VKYC documents at the bank
+    - Is it required to repeat VKYC at the bank
+    - Do I have to renew my VKYC at the bank
+    - Do I need to go through VKYC process again at the bank
+    - Is it imperative to repeat KYC in the bank again
+    - Do I have to revisit VKYC at the bank
+    - Is a repeat VKYC application necessary at the bank
+    - I want to do vkyc in the bank. Is it possible
+    - Do I need to complete KYC again at the bank
+    - Is a repeat VKYC process necessary at the bank
+    - Is a new KYC submission required at the bank
+    - Is it compulsory to redo VKYC in the bank
+
+- intent: Bot availbility
+  examples: |
+    - Can I use kyc process according to my convenience
+    - Can I access kyc process any time
+    - Is this vkyc system open 24X7
+    - Is kyc process open all the time
+    - Can use kyc facility when the bank is closed
+    - Is the vkyc facility available for any time
+    - Is vkyc available for whole day
+    - Is there any time restriction for use of kyc facility
+    - Can I use vkyc at the night
+    - What is the duration to do vkyc using this system
+    - Can I use vkyc on the holidays
+
+
+- intent: eligibility
+  examples: |
+    - Who can do kyc
+    - what are eligibility criterioCan you give me some information about VKYCn for vkyc
+    - For vkyc bank account is necessary
+    - criterion for kyc
+    - can under 18  person eligible for kyc
+    - I am minor can I eligible for the vkyc facility
+    - eligibility for vkyc facility
+    - What are prerequisites for kyc
+    - I am NRI person am I eligible for vkyc process
+
+- intent: Post Vkyc
+  examples: |
+    - Where do I have to go after vkyc
+    - What should be my next move after completing VKYC
+    - What are the next steps after completing VKYC
+    - what should i do after vkyc process
+    - Can you guide me on what to do after I complete KYC
+    - What are the next steps in the process after completing KYC
+    - What should I do once I have completed KYC
+    - What are the subsequent steps to take after VKYC is completed
+    - After vkyc what is next
+    - what is the process after completing vkyc session
+    - My vkyc process is complete now where should I go
+    - What are the necessary steps to follow after completing KYC
+    - Can you tell me what I should do after completing KYC
+    - I complete my vkyc what should i do next
+    - is this registration valid forever
+    - What actions should I take after finishing KYC
+
+- intent: Device
+  examples: |
+    - Can I do vkyc on my mobile
+    - I want to do kyc on laptop can I do it
+    - Is the computer necessary for vkyc
+    - Is there any authorized center for kyc
+    - Instead of using laptop can I use my mobile phone
+    - I do not have computer can I do it on the mobile
+    - On which device vkyc should do
+    - can i do vkyc offline
+    - is this neccessary to do kyc in online
+
+- intent: Registration Completion
+  examples: |
+    - After registration how can I know that I complete my registration properly
+    - Where can I know about completed registration
+    - Can I receive conformation after completion of registration for kyc
+    - I complete my registration how do I get conformation
+    - How can I know about the completed registration
+    - Is there any message to tell that my registration is complete
+
+- intent: Vkyc Timecycle
+  examples: |
+    - after how many days can I go for vkyc process
+    - what if my registration get expired
+    - when should I complete my kyc after registration
+    - after how many days registration get expire
+    - can i complete my kyc some days after registration
+    - how many days this registration is valid for vkyc
+    - can I do vkyc after 6-7 days of registration
+  
+
+- intent: Skip question
+  examples: |
+    - i want to skip question
+    - can i skip question
+    - i don't know this answer can i skip this question
+    - i don't remember this answer i want to skip this
+    - it is better for me to leave this question
+    - i want another question
+    - am not able to answer the question please give other quetion
+    - can i leave this question
+    - i am not sure about the answer would give me another question
+    - i am not confident about the given question can i get other one
+    - i am not certain about answer can i skip this question
+    - this question is beyond my knowledge provide another question
+    - don't know skip it
+    - leave this one
+    - i don't this i can answer this question so give next question
+    - this question not for me so leave it
+    - give next question
+    - right now i can't recall the answer give me next question
+    - skip this question i don't know answer
+    - next one please
+    - provide me other question
+    - can you change the question
+    - i want to change this question
+    - can i have other question
+    - change question 
+    - provide me alternate question
+    - i forgot my pan number can you ask me a different question
+    - forget this number ask me different question
+    - right am not able answer this question change this question please
+    - i can't remember i am happy if you change the question
+    - i am glad if you skip this question
+    - give next question want skip this one
+    - at this moment am not able give the answer please provide another question
+
+- intent: Repeat Question
+  examples: |
+    - can you repeat this question
+    - i not heard this question properly please speak again
+    - repeat question
+    - i was not attentive could you say again
+    - i want hear this question again
+    - sorry but repeat question
+    - i lost my attention please speak once again
+    - i am puzzled repeat question
+    - i not heard question please repeat again
+    - tell me once again
+    - tell me one more time
+    - i forget question can you repeat question
+    - can't remember question repeat
+    
+    
+- intent: Update
+  examples: |
+    - update
+    - update my kyc
+    - i want to update my information
+    - i want to change my mobile number
+    - update my aadhaar card
+    - change address
+    - update pan card
+    - i come here change my some information
+    - i want to change my biomatrics
+    - update my face
+    - update my know your customer
+    - update my informatiom
+    - alter my info
+    - can you change my photo
+  
+- intent: Consent
+  examples: |
+    - consent
+    - i want to give consent
+    - bank wants to give me consent 
+    - i want to give permission for data
+    - give permission to bank
+    - can you give yes to bank to access my information
+    - give access of documents to banks
+    - give permission to bank to get my documents or data
+    - let be access to the aadhaar data to financial institute
+    - give my consent to the access my documents to banks
+
+- intent: Forget Password
+  examples: |
+    - i forget password
+    - retriev my password
+    - i forget my username
+    - i forget my credential
+    - recover password
+    - recover my userid
+    - can't remember username
+    - how can i retriev userid
+    - i can't get my credential recover this
+    - give my userid and password
+    - recover my log in info
+    - forget my login id
+    - recover my login password
+    - retriev my login credential
+
+- intent: Know Info
+  examples: |
+    - i want to know my info
+    - provide me data
+    - give my kyc information
+    - show me all information about know your customer
+    - give details about me
+    - i wants to know which data i give to the kyc portal
+    - can you give all details about kyc data that i give while registration
+    - details about my data
+    - give my info
+    - all information related kyc data
+
+- intent: City
+  examples: |
+    - [mehadippatnam]{"entity":"CityName"} is where I am currently living
+    - I am currently a resident of city [warangal]{"entity":"CityName"}
+    - I'm currently residing in city [nizamabad]{"entity":"CityName"}
+    - I reside in the [raipur]{"entity":"CityName"}
+    - [raachi]{"entity":"CityName"} is the city I currently living
+    - I live in [vijaywada]{"entity":"CityName"}
+    - [jamshedpur]{"entity":"CityName"} is my current city
+    - I currently live in [mahe]{"entity":"CityName"}
+    - [konark]{"entity":"CityName"} is where I reside currently
+    - [bijapur]{"entity":"CityName"} is the city I call home
+
+- intent: State
+  examples: |
+    - My State is [maharashtra]{"entity":"stateName"}
+    - I am from [telangana]{"entity":"stateName"} State
+    - I Stay at [uttar pradesh]{"entity":"stateName"}
+    - [rajasthan]{"entity":"stateName"} this is my State of residency
+    - from [madhya pradesh]{"entity":"stateName"} pradesh
+    - I am from [uttarakhand]{"entity":"stateName"}
+    - my State name is [haryana]{"entity":"stateName"}
+    - [gujrat]{"entity":"stateName"}
+    - I am living at [andhra pradesh] state
+    - [karnatak]{"entity":"stateName"}
+    - [tamilnadu]{"entity":"stateName"}
+    - I am currently a resident of state [tripura]{"entity":"stateName"}
+    - I'm currently residing in [meghalaya]{"entity":"stateName"} state
+    - I reside in state [tripura]{"entity":"stateName"}
+    - [arunachal pradesh]{"entity":"stateName"} is the state I currently call home
+    - [jharkhand]{"entity":"stateName"} is my current residence state
+    - I currently live in state [gujarat]{"entity":"stateName"}
+    - i am resident of [west bengal]{"entity":"stateName"} state
+    - [telangana]{"entity":"stateName"} is the state where i live
+
+- lookup: CityName
+  examples: |
+    - nicobar
+    - north and middle andaman
+    - alluri sitarama raju
+    - south andaman
+    - anakapalle
+    - ananthapuramu
+    - annamayya
+    - bapatla	chittoor
+    - east godavari
+    - eluru
+    - guntur
+    - ysr kadapa
+    - kakinada
+    - krishna
+    - konaseema
+    - kurnool
+    - parvathipuram manyam
+    - nandyal
+    - ntr
+    - palnadu	prakasam
+    - nellore
+    - tirupati
+    - sri sathya sai
+    - srikakulam
+    - visakhapatnam
+    - vizianagaram
+    - west godavari
+    - anjaw
+    - changlang
+    - dibang valley
+    - east kameng
+    - east siangl
+    - kamle
+    - kra daadi
+    - kurung kumey
+    - lepa rada
+    - lohit
+    - longdling
+    - lower dibang valley
+    - lower siang
+    - lower subansiri
+    - namsai
+    - pakke kessang
+    - papum pare
+    - shi yomi
+    - siang
+    - tawang
+    - tirap
+    - upper siang
+    - upper subansiri
+    - west kameng
+    - west siang
+    - capital complex itanagar
+    - baksa
+    - barpeta
+    - biswanath
+    - bongaigaon
+    - cachar
+    - charaideo
+    - chirang
+    - darrang
+    - dhemaji
+    - dhubri
+    - dibrugarh
+    - dima hasao
+    - goalpara
+    - golaghat
+    - hailakandi
+    - hojai
+    - jorhat
+    - kamrup
+    - kamrup metropolitan
+    - karbi anglong
+    - karimaganj
+    - kokrajhar
+    - lakhimpur
+    - majuli
+    - morigaon
+    - nagaon
+    - nalbari
+    - sivasagar
+    - sonitpur
+    - south salamara mankachar
+    - tinsukia
+    - udakguri
+    - west karbi anglong
+    - bajali
+    - tamulpur
+    - araria
+    - arwal
+    - aurangabad
+    - banka
+    - begusarai
+    - bhagalpur
+    - bhojpur
+    - buxar
+    - darbhanga
+    - east champaran
+    - gaya
+    - gopalganj
+    - jamui
+    - jehanabad
+    - kaimur
+    - katihar
+    - khagaria
+    - kishanganj
+    - lakhisarai
+    - madhepura
+    - madhubani
+    - munger
+    - muzaffarpur
+    - nalanda
+    - nawada
+    - patna
+    - purnia
+    - rohtas
+    - saharsa
+    - samastipur
+    - saran
+    - sheikhpura
+    - sheohar
+    - sitamarhi
+    - siwan
+    - supaul
+    - vaishali
+    - west champaran
+    - bemetara
+    - balod
+    - baloda bazar
+    - balrampur
+    - bastar
+    - bijapur
+    - bilaspur
+    - dantewada
+    - dhamtari
+    - durg
+    - gariaband
+    - janjgir-champa
+    - jashpur
+    - kabirdham
+    - kanker
+    - kondagaon
+    - korba
+    - korea
+    - mahasamund
+    - mungeli
+    - narayanpur
+    - raigarh
+    - raipur
+    - rajnandgaon
+    - sukma
+    - surajpur
+    - surguja
+    - central delhi
+    - east delhi
+    - new delhi
+    - north delhi district_ent
+    - north east delhi
+    - north west delhi
+    - shahdara
+    - south delhi
+    - south east delhi
+    - south west delhi
+    - west delhi
+    - ahmedabad
+    - amreli
+    - anand
+    - arvalli
+    - banaskantha
+    - bharuch
+    - bhavnagar
+    - botad
+    - chhotaudepur
+    - dahod
+    - devbhumi dwarka
+    - gandhinagar
+    - gir somnath
+    - jamnagar
+    - junagadh
+    - kachchh
+    - kheda
+    - mahesana
+    - mahisagar
+    - morbi
+    - narmada
+    - navsari
+    - panch mahals
+    - patan
+    - porbandar
+    - the dangs
+    - vadodara
+    - valsad
+    - rajkot
+    - sabarkantha
+    - surat
+    - surendra nagar
+    - tapi
+    - bilaspur
+    - chamba
+    - hamirpur
+    - kangra
+    - kinnaur
+    - kullu
+    - lahul and spiti
+    - mandi
+    - shimla
+    - sirmaur
+    - solan
+    - una
+    - bokaro
+    - chatra
+    - deoghar
+    - dhanbad
+    - dumka
+    - east singhbhum
+    - garhwa
+    - giridih
+    - godda
+    - gumla
+    - hazaribag
+    - jamtara
+    - khunti
+    - koderma
+    - latehar
+    - lohardaga
+    - pakur
+    - palamau
+    - ramgarh
+    - ranchi
+    - sahibganj
+    - seraikela-kharsawan
+    - simdega
+    - west singhbhum
+    - alappuzha
+    - ernakulam
+    - idukki
+    - kannur
+    - kasargod
+    - kollam
+    - kottayam
+    - kozhikode
+    - malappuram
+    - palakkad
+    - pathanamthitta
+    - thiruvananthapuram
+    - thrissur
+    - wayanad
+    - lakshadweep
+    - ahmed nagar
+    - akola
+    - amravati
+    - aurangabad
+    - beed
+    - bhandara
+    - buldhana
+    - chandrapur
+    - dhule
+    - gadchiroli
+    - gondia
+    - hingoli
+    - jalgaon
+    - jalna
+    - kolhapur
+    - latur
+    - mumbai
+    - mumbai suburban
+    - nagpur
+    - nanded
+    - nandurbar
+    - nashik
+    - osmanabad
+    - palghar
+    - parbhani
+    - pune
+    - raigad
+    - ratnagiri
+    - sangli
+    - satara
+    - sindhudurg
+    - solapur
+    - thane
+    - wardha
+    - washim
+    - yavatmal
+    - east garohills
+    - east jaintia hills
+    - east khasi hills
+    - north garo hills
+    - ri bhoi
+    - south garo hills
+    - south west garo hills
+    - south west khasi hills
+    - west garo hills
+    - west jaintia hills
+    - west khasi hills
+    - dimapur
+    - kiphire
+    - kohima
+    - longleng
+    - mokokchung
+    - mon
+    - noklak
+    - peren
+    - phek
+    - tuensang
+    - wokha
+    - zunheboto
+    - karaikal
+    - mahe
+    - pondicherry
+    - yanam
+    - ajmer
+    - alwar
+    - banswara
+    - baran
+    - barmer
+    - ratlam
+    - bharatpur
+    - bhilwara
+    - bikaner
+    - bundi
+    - chittorgarh
+    - churu
+    - dausa
+    - dholpur
+    - dungarpur
+    - hanumangarh
+    - jaipur
+    - jaisalmer
+    - jalore
+    - jhalawar
+    - jhunjhunu
+    - jodhpur
+    - karauli
+    - kota
+    - nagaur
+    - pali
+    - pratapgarh
+    - rajsamand
+    - sawai madhopur
+    - sikar
+    - sirohi
+    - sri ganganagar
+    - tonk
+    - udaipur
+    - ariyalur
+    - chengalpattu
+    - chennai
+    - coimbatore
+    - cuddalore
+    - dharmapuri
+    - dindigul
+    - erode
+    - kallakurichi
+    - kanchipuram
+    - kanyakumari
+    - karur
+    - krishnagiri
+    - madurai
+    - mayiladuthurai
+    - nagapattinam
+    - namakkal
+    - nilgiris
+    - perambalur
+    - pudukkottai
+    - ramanathapuram
+    - ranipet
+    - salem
+    - sivaganga
+    - tenkasi
+    - thanjavur
+    - theni
+    - tiruchirappalli
+    - tirunelveli
+    - tirupathur
+    - tiruppur
+    - tiruvallur
+    - tiruvannamalai
+    - tiruvarur
+    - tuticorin
+    - vellore
+    - villupuram
+    - virudhunagar
+    - dhalai
+    - gomati
+    - khowai
+    - north tripura
+    - sepahijala
+    - south tripura
+    - unakoti
+    - west tripura
+    - almora
+    - bageshwar
+    - chamoli
+    - champawat
+    - dehradun
+    - haridwar
+    - nainital
+    - pauri garhwal
+    - pithoragarh
+    - rudraprayag
+    - tehri garhwal
+    - udham singh naga
+    - uttarkashi
+    - chandigarh
+    - dadra and nagar haveli
+    - daman
+    - diu
+    - north goa
+    - south goa
+    - ambala
+    - bhiwani
+    - charkhi dadri
+    - faridabad
+    - fatehabad
+    - gurugram
+    - hisar
+    - jhajjar
+    - jind
+    - kaithal
+    - karnal
+    - kurukshetra
+    - mahendragarh
+    - nuh
+    - palwal
+    - panchkula
+    - panipat
+    - rewari
+    - rohtak
+    - sirsa
+    - sonipat
+    - yamuna nagar
+    - anantnag
+    - bandipore
+    - baramulla
+    - budgam
+    - doda
+    - ganderbal
+    - jammu
+    - kathua
+    - kishtwar
+    - kulgam
+    - kupwara
+    - poonch
+    - pulwama
+    - rajauri
+    - ramban
+    - reasi
+    - samba
+    - shopian
+    - srinagar
+    - udhampur
+    - bagalkot
+    - ballari
+    - belagavi
+    - bengaluru
+    - bengaluru
+    - bidar
+    - chamrajnagar
+    - chikkaballapur
+    - chikkamagaluru
+    - chitradurga
+    - dakshina kannada
+    - davangere
+    - dharwad
+    - gadag
+    - hassan
+    - haveri
+    - kalaburagi
+    - kodagu
+    - kolar
+    - koppal
+    - mandya
+    - mysuru
+    - raichur
+    - ramanagar
+    - shivamogga
+    - tumakuru
+    - udupi
+    - uttara kannada
+    - yadgir
+    - kargil
+    - leh
+    - agar malwa
+    - alirajpur
+    - anuppur
+    - ashoknagar
+    - balaghat
+    - barwani
+    - betul
+    - bhind
+    - bhopal
+    - burhanpur
+    - chhatarpur
+    - chhindwara
+    - damoh
+    - datia
+    - dewas
+    - dhar
+    - dindori
+    - guna
+    - gwalior
+    - harda
+    - hoshangabad
+    - indore
+    - jabalpur
+    - jhabua
+    - katni
+    - khandwa
+    - khargone
+    - mandla
+    - mandsaur
+    - morena
+    - narsinghpur
+    - neemuch
+    - niwari
+    - panna
+    - raisen
+    - rajgarh
+    - ratlam
+    - rewa
+    - sagar
+    - satna
+    - sehore
+    - seoni
+    - shahdol
+    - shajapur
+    - sheopur
+    - shivpuri
+    - sidhi
+    - singrauli
+    - tikamgarh
+    - ujjain
+    - umaria
+    - vidisha
+    - bishnupur
+    - chandel
+    - churachandpur
+    - imphal east
+    - imphal west
+    - jiribam
+    - kakching
+    - kamjong
+    - kangpokpi
+    - noney
+    - pherzawl
+    - senapati
+    - tamenglong
+    - tengnoupal
+    - thoubal
+    - ukhrul
+    - aizawl
+    - champhai
+    - kolasib
+    - lawngtlai
+    - lunglei
+    - mammit
+    - saiha
+    - serchhip
+    - angul
+    - balangir
+    - baleswar
+    - bargarh
+    - bhadrak
+    - boudh
+    - cuttack
+    - deogarh
+    - dhenkanal
+    - gajapati
+    - ganjam
+    - jagatsinghapur
+    - jajpur
+    - jharsuguda
+    - kalahandi
+    - kandhamal
+    - kendrapara
+    - kendujhar
+    - khordha
+    - koraput
+    - malkangiri
+    - mayurbhanj
+    - nabarangapur
+    - nayagarh
+    - nuapada
+    - puri
+    - rayagada
+    - sambalpur
+    - sonapur
+    - sundergarh
+    - amritsar
+    - barnala
+    - bathinda
+    - faridkot
+    - fatehgarh sahib
+    - fazilka
+    - ferozepur
+    - gurdaspur
+    - hoshiarpur
+    - jalandhar
+    - kapurthala
+    - ludhiana
+    - mansa
+    - moga
+    - mohali
+    - muktsar
+    - nawanshahr
+    - pathankot
+    - patiala
+    - rupnagar
+    - sangrur
+    - tarn taran
+    - east sikkim
+    - north sikkim
+    - soreng
+    - south sikkim
+    - west sikkim
+    - adilabad
+    - bhadradri kothagudem
+    - hyderabad
+    - jagtial
+    - jangaon
+    - jayashankar bhoopalpally
+    - jogulamba gadwal
+    - kamareddy
+    - karimnagar
+    - khammam
+    - kumuram bheem
+    - mahabub nagar
+    - mahabubabad
+    - mancherial
+    - medak
+    - medchal-malkajgiri
+    - nagarkurnool
+    - nalgonda
+    - narayanpet
+    - nirmal
+    - nizamabad
+    - peddapally
+    - rajanna sircilla
+    - rangareddy
+    - sangareddy
+    - siddipet
+    - suryapet
+    - vikarabad
+    - wanaparthy
+    - warangal
+    - yadadri bhuvanagiri
+    - agra
+    - aligarh
+    - ambedkar nagar
+    - amethi
+    - amroha
+    - auraiya
+    - ayodhya
+    - azamgarh
+    - bagpat
+    - bahraich
+    - ballia
+    - balrampur
+    - banda
+    - barabanki
+    - bareilly
+    - basti
+    - bhadohi
+    - bijnor
+    - budaun
+    - bulandshahr
+    - chandauli
+    - chitrakoot
+    - deoria
+    - etah
+    - etawah
+    - farrukhabad
+    - fatehpur
+    - firozabad
+    - gautam buddha nagar
+    - ghaziabad
+    - ghazipur
+    - gonda
+    - gorakhpur
+    - hamirpur
+    - hapur
+    - kannauj
+    - kanpur dehat
+    - kanpur nagar
+    - kasganj
+    - kaushambi
+    - hardoi
+    - hathras
+    - jalaun
+    - jaunpur
+    - jhansi
+    - kushinagar
+    - lakhimpur kheri
+    - lalitpur
+    - lucknow
+    - maharajganj
+    - mahoba
+    - mainpuri
+    - mathura
+    - mau
+    - meerut
+    - mirzapur
+    - moradabad
+    - muzaffarnagar
+    - pilibhit
+    - pratapgarh
+    - prayagraj
+    - raebareli
+    - rampur
+    - saharanpur
+    - sambhal
+    - sant kabir nagar
+    - shahjahanpur
+    - shamli
+    - shrawasti
+    - siddharthnagar
+    - sitapur
+    - sonbhadra
+    - sultanpur
+    - unnao
+    - varanasi
+    - alipurduar
+    - bankura
+    - bankura district forest
+    - birbhum
+    - cooch behar
+    - darjeeling
+    - hooghly
+    - howrah
+    - jalpaiguri
+    - jhargram
+    - kalimpong
+    - kolkata
+    - malda
+    - murshidabad
+    - nadia
+    - north 24 parganas
+    - paschim burdwan
+    - paschim medinipur
+    - purba burdwan
+    - purba medinipur
+    - purulia
+    - south 24 parganas
+    - south dinajpur
+    - uttar dinajpur
+    - thane
+    - ahmadabad
+    - Surat
+    - ahmednagar
+    - patna
+    - malappuram
+    - ghaziabad
+    - west wiang
+    - lohit
+    - papum Pare
+    - golaghat
+    - dibrugarh
+    - vadodara
+    - rajkot
+    - aridabad
+    - karnal
+    - sirmaur
+    
+- lookup: stateName
+  examples: |
+    - andhra pradesh
+    - andaman and nicobar islands
+    - arunachal pradesh
+    - assam
+    - bihar
+    - chandigarh
+    - chattisgarh
+    - dadra and nagar haveli and daman and diu
+    - delhi
+    - goa
+    - gujarat
+    - haryana
+    - himachal pradesh
+    - jammu and kashmir
+    - jharkhand
+    - karnataka
+    - kerala
+    - ladakh
+    - lakshadweep
+    - madhya pradesh
+    - maharashtra
+    - manipur
+    - meghalaya
+    - mizoram
+    - nagaland
+    - odisha
+    - puducherry
+    - punjab
+    - rajasthan
+    - sikkim
+    - tamil nadu
+    - telangana
+    - tripura
+    - uttar pradesh
+    - uttarakhand
+    - ladakh
+    - puducherry
+    - delhi
+    - Lakshadweep
+    - dadra and nagar Haveli and daman and diu
+    - chandigarh
+    - andaman and nicobar islands
+    - west bengal
+    - tripura
+    - sikkim
+    - rajasthan
+    - odisha
+    - karnataka
+    - kerala
+    - assam
+    - manipur
+
+# - lookup: usrNam
+#   examples: |
+#     - name.yml

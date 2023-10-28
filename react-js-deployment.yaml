@@ -1,0 +1,61 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: kompose convert -f docker-compose.yaml
+    kompose.version: 1.28.0 (c4137012e)
+  creationTimestamp: null
+  labels:
+    app3: react-js
+  name: react-js
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app3: react-js
+  strategy: {}
+  template:
+    metadata:
+      annotations:
+        kompose.cmd: kompose convert -f docker-compose.yaml
+        kompose.version: 1.28.0 (c4137012e)
+      creationTimestamp: null
+      labels:
+        io.kompose.network/june-15-rasa-rasa-network: "true"
+        app3: react-js
+    spec:
+      containers:
+        - name: react-js
+          image: react-js:u3
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 3000
+
+          #      imagePullSecrets:
+#        - name: k8s-secret
+#      containers:
+#        - image: nikhilsg/nick_007:a3
+#          name: react-js
+#          ports:
+#            - containerPort: 3000
+          resources: {}
+
+          readinessProbe:
+            httpGet:
+              path: /
+              port: 3000
+            initialDelaySeconds: 5
+            periodSeconds: 5
+            successThreshold: 1
+          env:
+            - name: venv
+              valueFrom:
+                configMapKeyRef:
+                  name: rasa-config
+                  key: endpoints.yml
+#          envFrom:
+#            - configMap:
+#               name: rasa-config
+      restartPolicy: Always
+status: {}

@@ -1,0 +1,81 @@
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+##kind: Ingress   #up1
+metadata:
+  creationTimestamp: null
+  name: june-15-rasa-rasa-network
+  namespace: default
+spec:
+  podSelector:
+    matchLabels:
+      app3: react-js  # Allow React application to communicate with Rasa and Action server
+      io.kompose.network/june-15-rasa-rasa-network: "true"
+  ingress:
+      - from:
+          - podSelector:
+              matchLabels:
+                app2: rasa    # Allow Rasa to communicate with other services
+                io.kompose.network/june-15-rasa-rasa-network: "true"
+        ports:
+          - protocol: TCP
+            port: 5005
+      - from:
+          - podSelector:
+              matchLabels:
+                app: action-server  # Allow Action server to communicate with other services
+                io.kompose.network/june-15-rasa-rasa-network: "true"
+        ports:
+          - protocol: TCP
+            port: 5055
+      - from:
+          - podSelector:
+              matchLabels:
+                app1: data-extraction
+                io.kompose.network/june-15-rasa-rasa-network: "true"
+        ports:
+          - protocol: TCP
+            port: 5006
+ # rules:    #up2
+#   - host: 172.27.22.51
+#     http:
+#        paths:
+#          - path: /actions
+#            pathType: Prefix
+#            backend:
+#              service:
+#                name: action-server
+#                port:
+#                  number: 5055
+#          - path: /data-extraction
+#            pathType: Prefix
+#            backend:
+#              service:
+#                name: data-extraction
+#                port:
+#                  number: 5006
+#          - path: /rasa
+#            pathType: Prefix
+#            backend:
+#              service:
+#                name: rasa
+#                port:
+#                  number: 5005
+#          - path: /
+#            pathType: Prefix
+#            backend:
+#              service:
+#                name: react-js
+#                port:
+#                  number: 3000     #up3
+#  ingress:
+#    - from:
+#        - podSelector:
+#            matchLabels:
+##              app: react-js  # Allow React application to communicate with Rasa and Action server
+#              io.kompose.network/june-15-rasa-rasa-network: "true"
+#  podSelector:
+#    matchLabels:
+##      app: rasa    # Allow Rasa to communicate with other services
+#      app2: action-server  # Allow Action server to communicate with other services
+#      app3: data-extraction
+#            io.kompose.network/june-15-rasa-rasa-network: "true"
